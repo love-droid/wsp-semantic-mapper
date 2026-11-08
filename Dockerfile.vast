@@ -1,0 +1,17 @@
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    HF_HOME=/workspace/hf-cache
+
+WORKDIR /workspace/wsp-semantic-mapper
+
+COPY requirements-vast.txt ./requirements-vast.txt
+RUN pip install --no-cache-dir -r requirements-vast.txt
+
+COPY scripts ./scripts
+COPY schemas ./schemas
+COPY docs ./docs
+COPY README.md ./README.md
+
+CMD ["bash"]

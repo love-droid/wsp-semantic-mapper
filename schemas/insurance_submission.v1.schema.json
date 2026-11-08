@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Insurance submission mapping v1",
+  "description": "Extract explicitly supported facts from one application or quote into this target payload. Unknown or unresolved conflicting scalar values are null. Unknown lists are null; [] means explicitly known to contain no items. Preserve source roles and monetary bases. Do not infer missing facts from boilerplate or other documents.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["insured", "addresses", "policy_period", "business", "practice_areas", "risk_answers", "coverage_terms", "annual_premium"],
+  "properties": {
+    "insured": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["legal_name", "dba"],
+      "properties": {
+        "legal_name": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "description": "Legal name of the applicant or named insured. Exclude the broker, carrier, contact person, and trade name. If the document gives conflicting insured identities without resolving them, return null."
+        },
+        "dba": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "description": "Doing-business-as or trading name, only when supplied separately."
+        }
+      }
+    },
+    "addresses": {
+      "type": ["array", "null"],
+      "description": "Addresses explicitly associated with the insured. Exclude broker and carrier addresses. Include each distinct address-role pair once; do not assume an office address is a mailing address.",
+      "items": {"$ref": "#/$defs/address"}
+    },
+    "policy_period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["effective_date", "expiration_date"],
+      "properties": {
+        "effective_date": {
+          "$ref": "#/$defs/date",
+          "description": "Requested or quoted policy inception date, not the application submission or quote issue date."
+        },
+        "expiration_date": {
+          "$ref": "#/$defs/date",
+          "description": "Policy expiration date, not the date until which a quotation remains valid."
+        }
+      }
+    },
+    "business": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attorney_count", "non_attorney_staff_count", "year_established", "annual_payroll"],
+      "properties": {
+        "attorney_count": {
+          "$ref": "#/$defs/count",
+          "description": "Number of attorneys. Never substitute all employees or infer attorney count for a different type of business."
+        },
+        "non_attorney_staff_count": {
+          "$ref": "#/$defs/count",
+          "description": "Non-attorney staff only; exclude attorneys."
+        },
+        "year_established": {
+          "type": ["integer", "null"],
+          "minimum": 1000,
+          "maximum": 9999,
+          "description": "Year this business was established; not years of experience."
+        },
+        "annual_payroll": {
+          "$ref": "#/$defs/money",
+          "description": "Stated annual payroll as a number. Not revenue, premiums, or inferred employee compensation."
+        }
+      }
+    },
+    "practice_areas": {
+      "type": ["array", "null"],
+      "description": "Selected or answered practice areas only. Exclude unselected options printed on the form. Percentages refer to the measure stated in the source; do not assume blanks are zero.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "percentage"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1, "description": "Practice-area label as written in the source, with surrounding whitespace removed."},
+          "percentage": {"type": ["number", "null"], "minimum": 0, "maximum": 100, "description": "Percentage in percentage points: 50 means 50%, not 0.5. Use null if not supplied."}
+        }
+      }
+    },
+    "risk_answers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["real_estate_closings_or_escrow", "client_trust_account", "claims_in_past_5_years"],
+      "properties": {
+        "real_estate_closings_or_escrow": {
+          "type": ["boolean", "null"],
+          "description": "Whether the firm conducts real estate closings or handles escrow funds. Map explicit Yes/No to true/false; unanswered is null."
+        },
+        "client_trust_account": {
+          "type": ["boolean", "null"],
+          "description": "Whether the firm maintains a client trust account (IOLTA or equivalent). Do not infer it from escrow or practice areas."
+        },
+        "claims_in_past_5_years": {
+          "type": ["boolean", "null"],
+          "description": "Whether professional-services claims, suits, or demands occurred in the past 5 years. Do not substitute a question with another time window."
+        }
+      }
+    },
+    "coverage_terms": {
+      "type": ["array", "null"],
+      "description": "One item per explicitly supplied numeric limit, deductible, or retention row in an account-specific quote/schedule. Exclude boilerplate examples, unselected options, statutory/non-numeric rows, and unresolved template placeholders. Preserve combined bases such as Each Occurrence / Aggregate as one row; never assign one amount to two separate bases without evidence.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["coverage", "component", "term_type", "basis", "amount", "currency"],
+        "properties": {
+          "coverage": {"type": "string", "minLength": 1, "description": "Coverage section heading in source wording."},
+          "component": {"type": ["string", "null"], "minLength": 1, "description": "Source subheading or row label, such as Employers Liability or Limit of Liability. Carry forward a merged table cell only within its section."},
+          "term_type": {"type": "string", "enum": ["limit", "deductible", "retention"], "description": "Keep deductibles and retentions distinct; do not rename a retention as a deductible."},
+          "basis": {"type": ["string", "null"], "minLength": 1, "description": "Basis in source wording, such as Each Claim, Aggregate, or Bodily Injury by Disease - Each Employee. Preserve substantive qualifiers."},
+          "amount": {"type": "number", "minimum": 0, "description": "Numeric money amount without grouping separators or currency symbols."},
+          "currency": {"$ref": "#/$defs/currency"}
+        }
+      }
+    },
+    "annual_premium": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": {"$ref": "#/$defs/money", "description": "Explicit total annual policy premium. Exclude taxes and fees unless included in the stated total. Do not calculate a total from components or infer it from payroll."},
+        "currency": {"$ref": "#/$defs/currency"}
+      }
+    }
+  },
+  "$defs": {
+    "count": {"type": ["integer", "null"], "minimum": 0},
+    "money": {"type": ["number", "null"], "minimum": 0},
+    "date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO calendar date YYYY-MM-DD, or null when missing/ambiguous. Normalize only when the source date convention is established."
+    },
+    "currency": {
+      "type": ["string", "null"],
+      "pattern": "^[A-Z]{3}$",
+      "description": "Three-letter currency code only when identified for this amount by the source section or an explicit document-wide statement. A dollar symbol or US address alone does not establish USD. Otherwise null."
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "line1", "line2", "city", "state", "postal_code"],
+      "properties": {
+        "role": {"type": "string", "enum": ["primary_office", "mailing", "risk_location", "unspecified"], "description": "Role explicitly stated for this insured address; use unspecified when no role is stated."},
+        "line1": {"type": ["string", "null"], "minLength": 1},
+        "line2": {"type": ["string", "null"], "minLength": 1},
+        "city": {"type": ["string", "null"], "minLength": 1},
+        "state": {"type": ["string", "null"], "minLength": 1, "description": "State/province code or name supplied by the source. Do not guess from city or ZIP."},
+        "postal_code": {"type": ["string", "null"], "minLength": 1, "description": "Preserve postal codes as strings, including leading zeros."}
+      }
+    }
+  }
+}

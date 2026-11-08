@@ -1,0 +1,100 @@
+{"id": "arith-00", "suite": "unrelated", "kind": "exact", "prompt": "What is 17+28? Reply with digits only.", "gold": "45"}
+{"id": "arith-01", "suite": "unrelated", "kind": "exact", "prompt": "What is 46+19? Reply with digits only.", "gold": "65"}
+{"id": "arith-02", "suite": "unrelated", "kind": "exact", "prompt": "What is 8+7? Reply with digits only.", "gold": "15"}
+{"id": "arith-03", "suite": "unrelated", "kind": "exact", "prompt": "What is 100+23? Reply with digits only.", "gold": "123"}
+{"id": "arith-04", "suite": "unrelated", "kind": "exact", "prompt": "What is 6+15? Reply with digits only.", "gold": "21"}
+{"id": "arith-05", "suite": "unrelated", "kind": "exact", "prompt": "What is 34+34? Reply with digits only.", "gold": "68"}
+{"id": "arith-06", "suite": "unrelated", "kind": "exact", "prompt": "What is 90+11? Reply with digits only.", "gold": "101"}
+{"id": "arith-07", "suite": "unrelated", "kind": "exact", "prompt": "What is 3+41? Reply with digits only.", "gold": "44"}
+{"id": "arith-08", "suite": "unrelated", "kind": "exact", "prompt": "What is 12+9? Reply with digits only.", "gold": "21"}
+{"id": "arith-09", "suite": "unrelated", "kind": "exact", "prompt": "What is 55+16? Reply with digits only.", "gold": "71"}
+{"id": "arith-10", "suite": "unrelated", "kind": "exact", "prompt": "What is 2+2? Reply with digits only.", "gold": "4"}
+{"id": "arith-11", "suite": "unrelated", "kind": "exact", "prompt": "What is 70+25? Reply with digits only.", "gold": "95"}
+{"id": "arith-12", "suite": "unrelated", "kind": "exact", "prompt": "What is 14+5? Reply with digits only.", "gold": "19"}
+{"id": "arith-13", "suite": "unrelated", "kind": "exact", "prompt": "What is 9+30? Reply with digits only.", "gold": "39"}
+{"id": "arith-14", "suite": "unrelated", "kind": "exact", "prompt": "What is 21+21? Reply with digits only.", "gold": "42"}
+{"id": "arith-15", "suite": "unrelated", "kind": "exact", "prompt": "What is 4+18? Reply with digits only.", "gold": "22"}
+{"id": "arith-16", "suite": "unrelated", "kind": "exact", "prompt": "What is 63+7? Reply with digits only.", "gold": "70"}
+{"id": "arith-17", "suite": "unrelated", "kind": "exact", "prompt": "What is 11+11? Reply with digits only.", "gold": "22"}
+{"id": "arith-18", "suite": "unrelated", "kind": "exact", "prompt": "What is 80+19? Reply with digits only.", "gold": "99"}
+{"id": "arith-19", "suite": "unrelated", "kind": "exact", "prompt": "What is 13+6? Reply with digits only.", "gold": "19"}
+{"id": "plural-00", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of cat. Reply with that one word only.", "gold": "cats"}
+{"id": "plural-01", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of dog. Reply with that one word only.", "gold": "dogs"}
+{"id": "plural-02", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of pen. Reply with that one word only.", "gold": "pens"}
+{"id": "plural-03", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of car. Reply with that one word only.", "gold": "cars"}
+{"id": "plural-04", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of book. Reply with that one word only.", "gold": "books"}
+{"id": "plural-05", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of lamp. Reply with that one word only.", "gold": "lamps"}
+{"id": "plural-06", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of coin. Reply with that one word only.", "gold": "coins"}
+{"id": "plural-07", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of desk. Reply with that one word only.", "gold": "desks"}
+{"id": "plural-08", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of boat. Reply with that one word only.", "gold": "boats"}
+{"id": "plural-09", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of tree. Reply with that one word only.", "gold": "trees"}
+{"id": "plural-10", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of cup. Reply with that one word only.", "gold": "cups"}
+{"id": "plural-11", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of star. Reply with that one word only.", "gold": "stars"}
+{"id": "plural-12", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of road. Reply with that one word only.", "gold": "roads"}
+{"id": "plural-13", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of bird. Reply with that one word only.", "gold": "birds"}
+{"id": "plural-14", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of shoe. Reply with that one word only.", "gold": "shoes"}
+{"id": "plural-15", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of hill. Reply with that one word only.", "gold": "hills"}
+{"id": "plural-16", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of farm. Reply with that one word only.", "gold": "farms"}
+{"id": "plural-17", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of gate. Reply with that one word only.", "gold": "gates"}
+{"id": "plural-18", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of ship. Reply with that one word only.", "gold": "ships"}
+{"id": "plural-19", "suite": "unrelated", "kind": "exact", "prompt": "Write the plural of bell. Reply with that one word only.", "gold": "bells"}
+{"id": "copy-00", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: amber-kite-17", "gold": "amber-kite-17"}
+{"id": "copy-01", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: north-dock-4", "gold": "north-dock-4"}
+{"id": "copy-02", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: quiet-river-88", "gold": "quiet-river-88"}
+{"id": "copy-03", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: plain-stone-2", "gold": "plain-stone-2"}
+{"id": "copy-04", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: silver-key-50", "gold": "silver-key-50"}
+{"id": "copy-05", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: round-hill-9", "gold": "round-hill-9"}
+{"id": "copy-06", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: open-gate-31", "gold": "open-gate-31"}
+{"id": "copy-07", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: blue-line-6", "gold": "blue-line-6"}
+{"id": "copy-08", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: dry-field-12", "gold": "dry-field-12"}
+{"id": "copy-09", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: west-pier-70", "gold": "west-pier-70"}
+{"id": "copy-10", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: small-bell-3", "gold": "small-bell-3"}
+{"id": "copy-11", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: even-path-15", "gold": "even-path-15"}
+{"id": "copy-12", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: cold-lake-22", "gold": "cold-lake-22"}
+{"id": "copy-13", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: red-post-8", "gold": "red-post-8"}
+{"id": "copy-14", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: tall-oak-41", "gold": "tall-oak-41"}
+{"id": "copy-15", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: soft-rain-5", "gold": "soft-rain-5"}
+{"id": "copy-16", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: new-mill-19", "gold": "new-mill-19"}
+{"id": "copy-17", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: old-map-27", "gold": "old-map-27"}
+{"id": "copy-18", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: fair-wind-10", "gold": "fair-wind-10"}
+{"id": "copy-19", "suite": "unrelated", "kind": "exact", "prompt": "Repeat this text exactly: last-stop-64", "gold": "last-stop-64"}
+{"id": "code-00", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 3*4? Reply with only the value.", "gold": "12"}
+{"id": "code-01", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 10-3? Reply with only the value.", "gold": "7"}
+{"id": "code-02", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 2**5? Reply with only the value.", "gold": "32"}
+{"id": "code-03", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 9//2? Reply with only the value.", "gold": "4"}
+{"id": "code-04", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 8%3? Reply with only the value.", "gold": "2"}
+{"id": "code-05", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: len('kite')? Reply with only the value.", "gold": "4"}
+{"id": "code-06", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: int(True)? Reply with only the value.", "gold": "1"}
+{"id": "code-07", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: max(2, 9)? Reply with only the value.", "gold": "9"}
+{"id": "code-08", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: min(4, 4)? Reply with only the value.", "gold": "4"}
+{"id": "code-09", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: abs(-6)? Reply with only the value.", "gold": "6"}
+{"id": "code-10", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 'ab'+'c'? Reply with only the value.", "gold": "abc"}
+{"id": "code-11", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: bool(0)? Reply with only the value.", "gold": "False"}
+{"id": "code-12", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: bool(1)? Reply with only the value.", "gold": "True"}
+{"id": "code-13", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: round(2.2)? Reply with only the value.", "gold": "2"}
+{"id": "code-14", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: pow(2, 3)? Reply with only the value.", "gold": "8"}
+{"id": "code-15", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: list(range(3))? Reply with only the value.", "gold": "[0, 1, 2]"}
+{"id": "code-16", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 'Hi'.lower()? Reply with only the value.", "gold": "hi"}
+{"id": "code-17", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: 'ok'.upper()? Reply with only the value.", "gold": "OK"}
+{"id": "code-18", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: divmod(7, 2)[0]? Reply with only the value.", "gold": "3"}
+{"id": "code-19", "suite": "unrelated", "kind": "exact", "prompt": "What value does this Python expression produce: sorted([3, 1])[0]? Reply with only the value.", "gold": "1"}
+{"id": "fence-00", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line print(1) inside one markdown code fence.", "gold": "print(1)"}
+{"id": "fence-01", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line print(2) inside one markdown code fence.", "gold": "print(2)"}
+{"id": "fence-02", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line x = 3 inside one markdown code fence.", "gold": "x = 3"}
+{"id": "fence-03", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line y = 4 inside one markdown code fence.", "gold": "y = 4"}
+{"id": "fence-04", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line z = 5 inside one markdown code fence.", "gold": "z = 5"}
+{"id": "fence-05", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line n = 6 inside one markdown code fence.", "gold": "n = 6"}
+{"id": "fence-06", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line p = 7 inside one markdown code fence.", "gold": "p = 7"}
+{"id": "fence-07", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line q = 8 inside one markdown code fence.", "gold": "q = 8"}
+{"id": "fence-08", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line r = 9 inside one markdown code fence.", "gold": "r = 9"}
+{"id": "fence-09", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line s = 10 inside one markdown code fence.", "gold": "s = 10"}
+{"id": "fence-10", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line t = 11 inside one markdown code fence.", "gold": "t = 11"}
+{"id": "fence-11", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line u = 12 inside one markdown code fence.", "gold": "u = 12"}
+{"id": "fence-12", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line v = 13 inside one markdown code fence.", "gold": "v = 13"}
+{"id": "fence-13", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line w = 14 inside one markdown code fence.", "gold": "w = 14"}
+{"id": "fence-14", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line a = 15 inside one markdown code fence.", "gold": "a = 15"}
+{"id": "fence-15", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line b = 16 inside one markdown code fence.", "gold": "b = 16"}
+{"id": "fence-16", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line c = 17 inside one markdown code fence.", "gold": "c = 17"}
+{"id": "fence-17", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line d = 18 inside one markdown code fence.", "gold": "d = 18"}
+{"id": "fence-18", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line e = 19 inside one markdown code fence.", "gold": "e = 19"}
+{"id": "fence-19", "suite": "unrelated", "kind": "fence", "prompt": "Show the exact Python line f = 20 inside one markdown code fence.", "gold": "f = 20"}
